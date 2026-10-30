@@ -1,0 +1,8 @@
+environment  = "dev"
+state_bucket = "my-tf-state-bucket-ola-2026"
+project      = "northbridge-eks-platform"
+owner        = "Ola"
+cost_center  = "platform-team"
+cluster_name       = "northbridge-dev"
+kubernetes_version = "1.36"
+api_allowed_cidrs = ["172.56.29.96/32"]

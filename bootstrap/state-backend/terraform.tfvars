@@ -1,0 +1,5 @@
+region      = "us-east-1"
+bucket_name = "my-tf-state-bucket-ola-2026"
+project     = "northbridge-eks-platform"
+owner       = "Ola"
+cost_center = "platform-team"
