@@ -6,3 +6,4 @@ cost_center  = "platform-team"
 cluster_name       = "northbridge-dev"
 kubernetes_version = "1.36"
 api_allowed_cidrs = ["172.56.29.96/32"]
+dns_zone_name = "jamafrik.store"

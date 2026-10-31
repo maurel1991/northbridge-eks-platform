@@ -40,3 +40,7 @@ variable "api_allowed_cidrs" {
   description = "CIDR blocks allowed to reach the public EKS API endpoint (use your own public IP as /32)"
   type        = list(string)
 }
+variable "dns_zone_name" {
+  description = "Route 53 public hosted zone that ExternalDNS is allowed to manage"
+  type        = string
+}
