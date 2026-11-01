@@ -36,3 +36,15 @@ variable "efs_csi_addon_version" {
   description = "Pinned version of the aws-efs-csi-driver EKS add-on"
   type        = string
 }
+variable "metrics_server_chart_version" {
+  description = "Pinned version of the metrics-server Helm chart"
+  type        = string
+}
+variable "lb_controller_chart_version" {
+  description = "Pinned version of the aws-load-balancer-controller Helm chart (must match the IAM policy version)"
+  type        = string
+}
+variable "cluster_autoscaler_chart_version" {
+  description = "Pinned version of the cluster-autoscaler Helm chart (its app version must match the Kubernetes minor version)"
+  type        = string
+}
