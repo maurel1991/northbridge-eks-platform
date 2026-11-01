@@ -1,0 +1,7 @@
+environment  = "dev"
+state_bucket = "my-tf-state-bucket-ola-2026"
+project      = "northbridge-eks-platform"
+owner        = "Ola"
+cost_center  = "platform-team"
+ebs_csi_addon_version = "v1.67.2-eksbuild.1"
+efs_csi_addon_version = "v3.5.3-eksbuild.1"
