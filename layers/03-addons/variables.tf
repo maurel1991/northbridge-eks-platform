@@ -48,3 +48,15 @@ variable "cluster_autoscaler_chart_version" {
   description = "Pinned version of the cluster-autoscaler Helm chart (its app version must match the Kubernetes minor version)"
   type        = string
 }
+variable "external_secrets_chart_version" {
+  description = "Pinned version of the external-secrets Helm chart"
+  type        = string
+}
+variable "kube_prometheus_stack_chart_version" {
+  description = "Pinned version of the kube-prometheus-stack Helm chart"
+  type        = string
+}
+variable "fluent_bit_chart_version" {
+  description = "Pinned version of the fluent-bit Helm chart"
+  type        = string
+}

@@ -14,6 +14,9 @@ resource "aws_eks_addon" "ebs_csi" {
 resource "kubernetes_storage_class_v1" "gp3" {
   metadata {
     name = "gp3"
+    annotations = {
+      "storageclass.kubernetes.io/is-default-class" = "true"
+    }
   }
 
   storage_provisioner    = "ebs.csi.aws.com"
@@ -58,4 +61,19 @@ resource "kubernetes_storage_class_v1" "efs" {
   }
 
   depends_on = [aws_eks_addon.efs_csi]
+}
+# EKS creates "gp2" as the default StorageClass. Only one class should be the default,
+# so we remove the default flag from gp2 (gp3 is now the default).
+resource "kubernetes_annotations" "gp2_not_default" {
+  api_version = "storage.k8s.io/v1"
+  kind        = "StorageClass"
+  force       = true
+
+  metadata {
+    name = "gp2"
+  }
+
+  annotations = {
+    "storageclass.kubernetes.io/is-default-class" = "false"
+  }
 }
